@@ -25,6 +25,7 @@ public class methodx {
         Scanner input = new Scanner (System.in);
         methodx mt = new methodx();
         
+        try {
         System.out.print("Masukkan Diameter : ");
         int diameter = input.nextInt();
         System.out.print("Masukkan tinggi untuk tabung / kerucut : ");
@@ -33,7 +34,13 @@ public class methodx {
         System.out.println("Volume Tabung = " + mt.volume_tabung(diameter, tinggi));
         System.out.println("Volume Kerucut = " + mt.volume_kerucut(diameter, tinggi));
         System.out.println("Volume Bola = " + mt.volume_bola(diameter));
-        System.exit(0);
+        System.exit(0);    
+        } catch (Exception e) {
+            System.out.println("Inputan Tidak Valid, Harap Masukkan Angka Bulat.");
+        } finally {
+            input.close();
+        }
+        
     }
     
 }

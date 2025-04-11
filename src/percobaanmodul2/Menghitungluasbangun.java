@@ -17,7 +17,8 @@ public class Menghitungluasbangun {
     public static void main(String[] args) {
         Menghitungluasbangun mt = new Menghitungluasbangun();
         
-        String input = JOptionPane.showInputDialog("Pilih bangun datar :\n1. Persegi Panjang\n2. Segitiga\n3. Lingkaran");
+        try {
+            String input = JOptionPane.showInputDialog("Pilih bangun datar :\n1. Persegi Panjang\n2. Segitiga\n3. Lingkaran");
         int pilihan = Integer.parseInt(input);
         double hasil = 0;
         
@@ -41,9 +42,13 @@ public class Menghitungluasbangun {
                 break;
                 default:
                     JOptionPane.showInternalMessageDialog(null, "Pilihan Tidak Valid." + hasil);
-                    System.exit(0);         
+                    System.exit(0);
+            }
+                    
+            
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(null, "Inputan Salah Masukkan Nomor Sesuai Pilihan");
+                     
         }
-    }
-    
-    
+    }  
 }
