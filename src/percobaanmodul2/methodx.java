@@ -40,8 +40,6 @@ public class methodx {
             System.out.println("Inputan Tidak Valid, Harap Masukkan Angka Bulat.");
         } finally {
             input.close();
-        }
-        
+        }   
     }
-    
 }

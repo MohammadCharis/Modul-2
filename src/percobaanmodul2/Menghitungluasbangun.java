@@ -18,7 +18,8 @@ public class Menghitungluasbangun {
         Menghitungluasbangun mt = new Menghitungluasbangun();
         
         try {
-            String input = JOptionPane.showInputDialog("Pilih bangun datar :\n1. Persegi Panjang\n2. Segitiga\n3. Lingkaran");
+            String input = JOptionPane.showInputDialog("Pilih bangun datar :"
+                    + "\n1. Persegi Panjang\n2. Segitiga\n3. Lingkaran");
         int pilihan = Integer.parseInt(input);
         double hasil = 0;
         
@@ -33,7 +34,7 @@ public class Menghitungluasbangun {
                 int alas = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Alas : "));
                 int tinggi =Integer.parseInt(JOptionPane.showInputDialog("Masukkan Tinggi : "));
                 hasil = mt.Luas_Segitiga(alas, tinggi);
-                JOptionPane.showInternalMessageDialog(null, "Luas Segitiga = " + hasil/2);
+                JOptionPane.showInternalMessageDialog(null, "Luas Segitiga = " + hasil);
                 break;
             case 3 :
                 int diameter = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Diameter : "));
