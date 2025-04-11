@@ -9,8 +9,7 @@ public class Menghitungluasbangun {
     public double Luas_Segitiga (int alas, int tinggi) {
         return 0.5 * alas * tinggi;
     }
-    public double Luas_Lingkaran (int diameter) {
-        int jari2 = diameter/2;
+    public double Luas_Lingkaran (int jari2) {
         return Math.PI * Math.pow(jari2, 2);
     } 
     
@@ -37,8 +36,8 @@ public class Menghitungluasbangun {
                 JOptionPane.showInternalMessageDialog(null, "Luas Segitiga = " + hasil);
                 break;
             case 3 :
-                int diameter = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Diameter : "));
-                hasil = mt.Luas_Lingkaran(diameter);
+                int jari2 = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Jari - Jari : "));
+                hasil = mt.Luas_Lingkaran(jari2);
                 JOptionPane.showInternalMessageDialog(null, "Luas Lingkaran : " + hasil);
                 break;
                 default:
