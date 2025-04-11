@@ -8,13 +8,14 @@ public class methodx {
         double luas = Math.PI * Math.pow(jari2,2);
         return luas;
     }
-    public double volume_tabung (int diameter, int tinggi) {
-        double Luas_alas = luas_lingkaran(diameter);
-        return Luas_alas * tinggi;
+    public double volume_tabung (int diameter, double tinggi) {
+        int jari2 = diameter /2;
+        double volume = Math.PI * Math.pow(jari2,2) * tinggi;
+        return volume;
     }
-    public double volume_kerucut (int diameter, int tinggi) {
-        double Luas_alas = luas_lingkaran(diameter);
-        return (1.0/3.0) * Luas_alas * tinggi;
+    public double volume_kerucut (int diameter, double tinggi) {
+        int jari2 = diameter/2;
+        return (1.0/3.0) * Math.PI * Math.pow(jari2, 2) * tinggi; 
     }
     public double volume_bola (int diameter) {
         int jari2 = diameter/2;
@@ -29,7 +30,7 @@ public class methodx {
         System.out.print("Masukkan Diameter : ");
         int diameter = input.nextInt();
         System.out.print("Masukkan tinggi untuk tabung / kerucut : ");
-        int tinggi = input.nextInt();
+        double tinggi = input.nextInt();
         System.out.println("Luas Lingkaran = " + mt.luas_lingkaran(diameter));
         System.out.println("Volume Tabung = " + mt.volume_tabung(diameter, tinggi));
         System.out.println("Volume Kerucut = " + mt.volume_kerucut(diameter, tinggi));
